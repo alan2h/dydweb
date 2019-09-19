@@ -1,0 +1,37 @@
+h2[title]{
+    color: red;
+}
+
+h2[title="hola"]{
+    color: red;
+} 
+
+h2[lang |= "es"]{
+    color: blue;
+}
+
+.rojo {
+    color: red !important;
+}
+
+.azul {
+    color: blue;
+}
+
+
+
+/* colision de estilos
+
+    1 - css del navegador
+    2 - css del usuario.
+    3 - archivos css enlazados en el orden añadidos
+    4 - propiedades que se heredan
+    5 - propiedades propias del elemento. 
+    6 - clases asignadas.
+    7 - identificadores.
+    8 - !important
+*/
+
+div{
+    font-size: 50px;
+}

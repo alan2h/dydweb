@@ -1,0 +1,7 @@
+div > p {
+    color: red;
+}
+
+p ~ p {
+    color: rgb(0, 128, 100);
+}

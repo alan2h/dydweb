@@ -1,0 +1,21 @@
+body {
+    font-size: 26px;
+}
+
+p.em {
+    font-size: 2em;
+}
+
+div p{
+    font-size: 2em;
+}
+
+div p.rem{
+    font-size: 1rem;
+}
+
+p.ex {
+    font-size: 1ex;
+}
+
+/* los pixeles pueden ser decimales */

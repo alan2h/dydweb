@@ -1,0 +1,9 @@
+p{
+    border: 1px solid black;
+    background: orange;
+    display: inline;
+}
+
+p#ghost{
+    display: none;
+}

@@ -1,0 +1,11 @@
+header h2, h3 {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+p#azul {
+    color: green;
+}
