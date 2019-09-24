@@ -1,9 +1,32 @@
-div {
-    width: 50%;
-    height: 100px;
-    border:  1px solid black;
+.padre{
+    width: 200px;
+    height: 200px;
+    background: yellow;
 }
-div.dimension {
-    min-width: 250px;
-    max-width: 400px;
+
+.hijo{
+    width: 60px;
+    height: 60px;
+    background: blue;
+    float: left;
+    position: absolute;
+}
+
+.hijo2{
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 99;
+    position: relative;
+    background: red;
+    top: -25px;
+    margin: 2%;
+}
+
+.oculto{
+    visibility: hidden; /* no muestra para otro ocupa su lugar */
+}
+
+.transparencia{
+    opacity: 0.5;
 }

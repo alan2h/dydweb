@@ -1,0 +1,14 @@
+p:hover{
+    color: green;
+    font-size: 10px;
+}
+
+span:active{
+    color: red;
+    font-size: 30px;
+}
+
+input:focus{
+    background-color: blue;
+    border-radius: 20px;
+}

@@ -1,0 +1,29 @@
+p.in {
+    font-size: .21in;
+}
+p.cm {
+    font-size: .21cm;
+}
+
+p.pt {
+    font-size: 2pt;
+}
+
+/* medidas porcentuales */
+
+div {
+    background: red;
+}
+
+div.fija {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+div.porcentual {
+    height: 100px;
+    width: 50%;
+    background: blue;
+    margin: 5%;
+}

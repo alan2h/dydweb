@@ -1,0 +1,13 @@
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+p.text{
+    font-family: Helvetica;
+    font-weight: bolder; /*ligther */
+    font-style: oblique; /* italic */
+    text-align: justify;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 100px;
+}

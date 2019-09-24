@@ -1,0 +1,18 @@
+body{
+    background: blue;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid green;
+    margin: 50px;
+    box-shadow: 10px 20px 5px red;
+}
+p{
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    text-shadow: 1px 1px 0px red;
+}

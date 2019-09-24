@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <p>prueba </p>
+    <h1>Encabezado</h1>
+    <div>
+        <h2 class="encabezado">encabezado 2</h2>
+    </div>
+    <a href="#">aquí</a>
+    <input name="nombre" id="id_nombre" type="text"  
+    value="prueba">
+    <button onclick="mi_funcion()">cambiar texto</button>
+</body>
+<script>
+    console.log(document.getElementById('id_nombre').value);
+    function mi_funcion(){
+        
+        mi_funcion2('parametro')
+    }
+    function mi_funcion2(nombre=''){
+        document.getElementById('id_nombre').value = nombre;
+    }
+</script>
+</html>

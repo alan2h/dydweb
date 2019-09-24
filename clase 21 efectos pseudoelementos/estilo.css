@@ -1,0 +1,11 @@
+div{
+    border: 2px solid black;
+    width: 50%;
+    position: relative;
+    margin: 20%;
+}
+
+div:before{
+    content: 'hola';
+
+}

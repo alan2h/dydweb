@@ -1,0 +1,21 @@
+div{
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+    margin: 20px;
+    background: url('sinfondo.png'),
+                url('imagen.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, bottom;
+    background-size: 100%, 40%;
+}
+
+.degradado{
+    background: -webkit-radial-gradient(
+        center,
+        blue 0%,
+        red 30%,
+        green 80%,
+        yellow 100%
+    )
+}

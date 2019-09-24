@@ -1,0 +1,15 @@
+div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.reservadas {
+    background-color: lime;
+
+}
+
+.luzRGB{
+    background: rgb(250, 100, 0)
+}

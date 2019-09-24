@@ -1,0 +1,20 @@
+div{
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+    background: orange;
+    margin: 50px;
+    margin-right: 50px;
+    /*transform: rotate(10deg);
+    transform-origin: right;*/
+    /* transform: skew(20deg); */
+    /* translateY(8px); */
+    transform: scale(1.8, 0.2);
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+
+div:active{
+    transform: scale(1, 0.5)
+}

@@ -1,0 +1,13 @@
+p{
+    position: relative;
+}
+
+p::before{
+    content: "-esto es una prueba de pseudoelementos ";
+    top: 25px;
+    position: relative;
+}
+
+p::first-letter{
+    text-transform: uppercase;
+}
