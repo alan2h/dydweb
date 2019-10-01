@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        width: 300px;
+    }
+    input{
+        margin: 2px;
+    }
+    table, th, td{
+        border: 1px solid black;
+    }
+    thead{
+        background: yellowgreen;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" name="userId" id="userId">
+        <input type="text" name="title" id="title">
+        <input type="text" name="body" id="body">
+        <button type="button" id="guardar">Guardar</button>
+    </form>
+    <table id="id_table">
+        <thead>
+            <tr>
+                <td>UserID</td>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Body</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    // https://jsonplaceholder.typicode.com/posts
+
+    // hacer en clase 
+
+    $(document).ready(function(){
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            success: function(resultado){
+                for (let x=0; x < resultado.length; x++){
+                    $('#id_table').append('<tr>' + 
+                        '<td>' + resultado[x].userId  + '</td>' + 
+                        '<td>' + resultado[x].id  + '</td>' + 
+                        '<td>' + resultado[x].title  + '</td>' +
+                        '<td>' + resultado[x].body  + '</td>' + '</tr>')
+                }
+            }
+        })
+    })
+
+    $('#guardar').click(function(){
+        $.post('https://jsonplaceholder.typicode.com/posts', {
+            "userId": $('#userId').val(),
+            "title": $('#title').val(),
+            "body": $('#body').val()
+        },
+        function(resultado, status){
+            console.log(resultado, status);
+        })
+    })
+</script>
+
+
+</html>

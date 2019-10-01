@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        width: 300px;
+    }
+    input{
+        -webkit-box-sizing: content-box;
+        width: 50%;
+    }
+    .error{
+        border: 2px solid red;
+    }
+    label{
+        color: red;
+    }
+</style>
+<body>
+    <form>
+        <input name="nombre" id="id_nombre">
+        <input name="apellido" id="id_apellido">
+        <input name="edad" id="id_edad">
+        <label id="id_error_edad"></label>
+        <button id="id_guardar" type="button" >Guardar</button>
+    </form>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $('#id_guardar').click(function(){
+       if (validar()){
+           alert('guardar');
+       }
+    })
+
+    function validar(){
+        let valido = true
+        $('#id_edad').removeClass('error');
+        $('#id_error_edad').text('');
+        if (!($.isNumeric($("#id_edad").val()))){
+            valido = false
+            $('#id_edad').addClass('error');
+            $('#id_error_edad').text('Ingresar un numero')
+
+        }
+        return valido
+    }
+</script>
+</html>
