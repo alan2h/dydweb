@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #id_tabla_usuarios, th, td{
+            border: solid 1px black;
+        }
+        thead{
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <table  id="id_tabla_usuarios">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>adress</th>
+                <th>phone</th>
+                <th>website</th>
+                <th>company</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+
+    /*---- desarmar el json ------*/
+    /*----- desarmar company y address ----*/
+    /*----- agregar un formulario --------*/
+
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/users',
+        success: function (resultado) { 
+            console.table(resultado);
+            for (var x=0; x < resultado.length; x++){
+              
+                $('#id_tabla_usuarios').append("<tr>" + 
+                    "<td>" + resultado[x].id +"</td>" + 
+                    "<td>" + resultado[x].name +"</td>" + 
+                    "<td>" + resultado[x].username +"</td>" + 
+                    "<td>" + resultado[x].email +"</td>" + 
+                    "<td>" + resultado[x].address.street +"</td>" + 
+                    "<td>" + resultado[x].phone +"</td>" + 
+                    "<td>" + resultado[x].website +"</td>" + 
+                    "<td>" + resultado[x].company.name +"</td>" + 
+                "</tr>")
+            }
+         }
+    })
+</script>
+</html>

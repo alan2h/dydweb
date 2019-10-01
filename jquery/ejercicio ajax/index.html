@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input value="10" required id="id_userId">
+        <input  value="" required  id="title">
+        <input value="" required id="body"> 
+        <button type="button" id    ="id_guardar">Guardar</button>
+    </form>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+
+/*---- validar que el primer campo sea numerico ----*/
+/* --- validar que sean requeridos -----*/
+
+
+    $('#id_guardar').click(function(){
+        $.post('https://jsonplaceholder.typicode.com/posts', {
+            "userId": $('#id_userId').val(),
+            "title": $('#title').val(),
+            "body": $('#body').val()
+        }, function(result){
+            console.log(result);
+        })
+    })
+
+</script>
+</html>
