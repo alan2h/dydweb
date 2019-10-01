@@ -1,0 +1,43 @@
+<!-- http://projects.sergiodinislopes.pt/flexdatalist/#examples  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.flexdatalist.css">
+</head>
+<body>
+        <input type='text'
+        placeholder='Programming language name'
+        class='flexdatalist'
+        data-min-length='1'
+        multiple=''
+        data-selection-required='1'
+        list='languages'
+        name='language22'>
+ 
+ <datalist id="languages">
+     <option value="PHP">PHP</option>
+     <option value="JavaScript">JavaScript</option>
+     <option value="Cobol">Cobol</option>
+     <option value="C#">C#</option>
+     <option value="C++">C++</option>
+     <option value="Java">Java</option>
+     <option value="Pascal">Pascal</option>
+     <option value="FORTRAN">FORTRAN</option>
+     <option value="Lisp">Lisp</option>
+     <option value="Swift">Swift</option>
+ </datalist>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery.flexdatalist.min.js"></script>
+<script>
+$('.flexdatalist').flexdatalist({
+     selectionRequired: 1,
+     minLength: 1
+});
+</script>
+</html>
