@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="" id="id_id">
+        <input type="text" name="" id="id_title">
+        <input type="text" name="" id="id_body">
+        <button type="button" id="id_guardar" >guardar</button>
+    </form>
+    <table id="id_tabla_usuarios">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>body</th>
+        </tr>
+    </table>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            success: function(resultado){
+                for (var x=0; x < resultado.length; x++){
+                    $('#id_tabla_usuarios').append('<tr>' + 
+                        '<td>' + resultado[x].id + '</td>' +
+                        '<td>' + resultado[x].title + '</td>' +
+                        '<td>' + resultado[x].body + '</td>' +
+                        + '</tr>')
+                }
+            }
+        })
+    })
+
+    $('#id_guardar').click(function(){
+        $.post('https://jsonplaceholder.typicode.com/posts', {
+            id: $('#id_id').val(),
+            title: $('#id_title').val(),
+            body: $('#id_body').val()
+         }, function(resultado, estado){
+            $('#id_tabla_usuarios').append('<tr>' + 
+                        '<td>' + resultado.id + '</td>' +
+                        '<td>' + resultado.title + '</td>' +
+                        '<td>' + resultado.body + '</td>' +
+                        + '</tr>')
+         })
+    })
+</script>
+</html>

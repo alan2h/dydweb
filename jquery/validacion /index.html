@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <form>
+        <input type="text" value="" id="id_nombre">
+        <input value="" id="id_apellido">
+        <input value="" id="id_edad">
+        <button onclick="enviar()" type="button">Enviar</button>
+    </form>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    function enviar(){
+        if (($('#id_nombre').val() == '') && ($('#id_apellido').val() == '')){
+            alert('rellene los campos')
+        }
+        if (!($.isNumeric($('#id_edad').val()))){
+            alert('Ingrese un numero')
+        }
+    }
+</script>
+</html>
